@@ -1,0 +1,88 @@
+<style>
+  .search-btn {
+    background-color: #fe424d;
+    color: #fff;
+    border-radius: 50%;
+    margin-left: 3rem;
+  }
+  .search-btn:hover {
+    background-color: #fe424d;
+    color: #fff;
+  }
+  .search-box {
+    border-radius: 25px;
+    padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+  .search-box:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  }
+  .search-inp {
+    outline: none;
+    border: none;
+    margin-left: 1rem;
+  }
+  
+  .container-fluid {
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+  }
+
+
+  @media (max-width: 768px) {
+    .search-box {
+      width: 18rem;
+    }
+    .search-btn {
+      margin-left: 2rem;
+      width: 40px !important;
+    }
+  }
+
+  @media (min-width: 768px) { 
+    .container-fluid {
+      margin-inline-start: 4rem;
+      margin-inline-end: 4rem;
+    }
+  }
+</style>
+
+<nav class="navbar navbar-expand-md bg-body-tertiary border-bottom sticky-top shadow p-2 mb-3 rounded">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/listings"><i class="fa-solid fa-house-user"></i></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="/listings">Explore</a>
+        </div>
+
+        <div class="navbar-nav ms-auto">
+          <div class="form-control me-2 search-box" >
+            <form class="d-flex" role="search">             
+                <input class="search-inp" type="search"  placeholder="Search destinations">
+                <button class="btn search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>             
+            </form>
+          </div>
+        </div>
+
+
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" href="/listings/new">PropetiEase your home</a>
+          
+          <% if(!currUser) { %>
+          <a class="nav-link" href="/signup"><strong>SignUp</strong></a>
+          <a class="nav-link" href="/login"><strong>Login</strong></a>
+          <% } %>
+
+          <% if(currUser) { %>
+          <a class="nav-link" href="/logout"><strong>Logout</strong></a>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </nav>
