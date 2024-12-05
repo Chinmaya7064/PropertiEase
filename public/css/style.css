@@ -4,7 +4,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #f1f5f9 !important;
+    /* background-color: #f1f5f9 !important; */
+    background-color: #323232 !important;
 }
 
 .container {
@@ -16,6 +17,7 @@ body {
 .navbar {
     height: 5rem;
     /* background-color: #e2e8f0 !important; */
+    background-color: #1c1c1c;
 }
 
 .fa-house-user {
@@ -24,8 +26,78 @@ body {
 }
 
 .nav-link {
-    color: #222222 !important;
+    color: #fff !important;
+    
 }
+
+
+#filters {
+    color: #fff;
+}
+
+/* cards */
+
+.listing-card {
+    border: none !important;
+    margin-bottom: 2rem !important;
+    background-color: #323232 !important;
+}
+
+.card-img-top {
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    margin-top: 1rem;
+}
+
+.card-body {
+    padding: 0 !important;
+    
+}
+
+.card-text {
+    font-weight: 400 !important;
+    color: #fff;
+}
+
+.listing-link {
+    text-decoration: none;
+}
+
+/* card effect  */
+
+.card-img-overlay {
+    opacity: 0;
+}
+
+.card-img-overlay:hover {
+    opacity: 0.2;
+    background-color: white;
+}
+
+/* new page  */
+
+.add-btn, .update-btn {
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+/* show page  */
+.show-img {
+    height: 45vh;
+}
+
+.show-btns {
+    display: flex;
+    gap: 10px;
+}
+
+.show-card {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
 
 
 /* Footer */
@@ -65,65 +137,9 @@ body {
     text-align: center;
 }
 
-/* cards */
 
-.listing-card {
-    border: none !important;
-    margin-bottom: 2rem !important;
-    background-color: #f1f5f9 !important;
-}
 
-.card-img-top {
-    border-radius: 1rem !important;
-    width: 100% !important;
-    object-fit: cover !important;
-    margin-top: 1rem;
-}
-
-.card-body {
-    padding: 0 !important;
-}
-
-.card-text {
-    font-weight: 400 !important;
-}
-
-.listing-link {
-    text-decoration: none;
-}
-
-/* card effect  */
-
-.card-img-overlay {
-    opacity: 0;
-}
-
-.card-img-overlay:hover {
-    opacity: 0.2;
-    background-color: white;
-}
-
-/* new page  */
-
-.add-btn, .update-btn {
-    background-color: #fe424d !important;
-    border: none !important;
-}
-
-/* show page  */
-.show-img {
-    height: 45vh;
-}
-
-.show-btns {
-    display: flex;
-    gap: 10px;
-}
-
-.show-card {
-    padding-left: 0;
-    padding-right: 0;
-}
+/* media query */
 
 @media (max-width: 768px) {
     .btn {
